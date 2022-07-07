@@ -12,23 +12,23 @@ project "GLFW"
 		"src/glfw_config.h",
 		"src/context.c",
 		"src/init.c",
-    "src/internal.h",
-    "src/platform.h",
-    "src/platform.c",
-    "src/mappings.h",
+    		"src/internal.h",
+    		"src/platform.h",
+    		"src/platform.c",
+    		"src/mappings.h",
 		"src/input.c",
 		"src/monitor.c",
 		"src/vulkan.c",
 		"src/window.c",
   
-    "null_platform.h",
-    "null_joystick.h",
-    "null_init.c",
-    "null_monitor.c", 
-    "null_window.c",
-    "null_joystick.c",
+    		"null_platform.h",
+    		"null_joystick.h",
+		"src/null_joystick.c",
+		"src/null_init.c",
+		"src/null_monitor.c",
+		"src/null_window.c",
   
-    "src/egl_context.c",
+    		"src/egl_context.c",
 		"src/osmesa_context.c"
 	}
 	filter "system:linux"
@@ -63,11 +63,11 @@ project "GLFW"
 			"src/win32_init.c",
 			"src/win32_joystick.c",
 			"src/win32_monitor.c",
+			"src/win32_module.c",
 			"src/win32_time.c",
 			"src/win32_thread.c",
 			"src/win32_window.c",
-			"src/wgl_context.c",
-			"src/osmesa_context.c"
+			"src/wgl_context.c"
 		}
 
 		defines 
