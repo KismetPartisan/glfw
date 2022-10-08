@@ -1,7 +1,6 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("obj/" .. outputdir .. "/%{prj.name}")
@@ -28,14 +27,12 @@ project "GLFW"
 		"src/null_init.c",
 		"src/null_monitor.c",
 		"src/null_window.c",
-  
-    		"src/egl_context.c",
-		"src/osmesa_context.c"
 	}
 	filter "system:linux"
 		pic "On"
 
 		systemversion "latest"
+		staticruntime "On"
 
 		files
 		{
@@ -46,6 +43,8 @@ project "GLFW"
 			"src/posix_time.c",
 			"src/posix_thread.c",
 			"src/glx_context.c",
+			"src/egl_context.c",
+			"src/osmesa_context.c",
 			"src/linux_joystick.c"
 		}
 
@@ -56,6 +55,7 @@ project "GLFW"
 
 	filter "system:windows"
 		systemversion "latest"
+		staticruntime "On"
 
 		files
 		{
@@ -66,7 +66,9 @@ project "GLFW"
 			"src/win32_time.c",
 			"src/win32_thread.c",
 			"src/win32_window.c",
-			"src/wgl_context.c"
+			"src/wgl_context.c",
+			"src/egl_context.c",
+			"src/osmesa_context.c"
 		}
 
 		defines 
