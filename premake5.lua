@@ -36,12 +36,23 @@ project "GLFW"
 
 		files
 		{
+			"src/x11_platform.h",
 			"src/x11_init.c",
 			"src/x11_monitor.c",
 			"src/x11_window.c",
+			"src/wl_platform.h",
+			"src/wl_init.c",
+			"src/wl_monitor.c",
+			"src/wl_window.c",
 			"src/xkb_unicode.c",
+			"src/xkb_unicode.h",
 			"src/posix_time.c",
+			"src/posix_time.h",
 			"src/posix_thread.c",
+			"src/posix_thread.h",
+			"src/posix_module.c",
+			"src/posix_poll.c",
+			"src/posix_poll.h",
 			"src/glx_context.c",
 			"src/egl_context.c",
 			"src/osmesa_context.c",
